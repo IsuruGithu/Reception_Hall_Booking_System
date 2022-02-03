@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.setupOrderItemsController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="833.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Assets/Icon/background1.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="orderitemContext" layoutY="85.0" prefHeight="566.0" prefWidth="833.0">
+         <children>
+            <Label layoutX="207.0" layoutY="123.0" opacity="0.08" text="Order Items" textFill="WHITE">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-34.0" prefHeight="84.0" prefWidth="833.0" AnchorPane.bottomAnchor="569.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="4.0" layoutY="57.0" mnemonicParsing="false" onAction="#openpackage" prefHeight="28.0" prefWidth="138.0" stylesheets="@../Style/setuporder.css" text="Set up Package" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="141.0" layoutY="57.0" mnemonicParsing="false" onAction="#openHall" prefHeight="28.0" prefWidth="138.0" stylesheets="@../Style/setuporder.css" text="Hall" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="278.0" layoutY="57.0" mnemonicParsing="false" onAction="#openPhotographer" prefHeight="28.0" prefWidth="138.0" stylesheets="@../Style/setuporder.css" text="Photographer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="415.0" layoutY="57.0" mnemonicParsing="false" onAction="#opencar" prefHeight="28.0" prefWidth="138.0" stylesheets="@../Style/setuporder.css" text="Car" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="306.0" layoutY="14.0" text="Setup Order Items" textFill="#110000" AnchorPane.leftAnchor="306.0" AnchorPane.rightAnchor="306.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="689.0" layoutY="57.0" mnemonicParsing="false" onAction="#openOtherServices" prefHeight="28.0" prefWidth="138.0" stylesheets="@../Style/setuporder.css" text="Other Services" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="552.0" layoutY="57.0" mnemonicParsing="false" onAction="#openEntertainmentUi" prefHeight="28.0" prefWidth="138.0" stylesheets="@../Style/setuporder.css" text="Enatertainment" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

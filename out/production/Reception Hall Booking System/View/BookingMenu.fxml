@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BookingMenuController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="833.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../Assets/Icon/background1.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="293.0" layoutY="14.0" prefHeight="30.0" prefWidth="247.0" text="Booking &amp; Set Order" textFill="#0a0000" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="293.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="229.0" layoutY="52.0" opacity="0.44" prefWidth="200.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="48.0" />
+      <Separator layoutX="586.0" layoutY="60.0" opacity="0.35" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="18.0" />
+      <Separator layoutX="603.0" layoutY="28.0" opacity="0.35" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="18.0" />
+      <Pane layoutX="763.0" opacity="0.28" prefHeight="650.0" prefWidth="50.0" style="-fx-background-color: #367bf0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="763.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="42.0" layoutY="68.0" text="* Booking ID :" textFill="#0a0000">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtbookId" layoutX="145.0" layoutY="69.0" text="B001" textFill="#0a0000" />
+      <Label layoutX="305.0" layoutY="68.0" text="* Booking Date :" textFill="#0a0000">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="428.0" layoutY="69.0" text="2021-01-01" textFill="#0a0000" />
+      <Label layoutX="544.0" layoutY="69.0" text="* Booking Time :" textFill="#0a0000">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="670.0" layoutY="69.0" text="10:12:35" textFill="#0a0000" />
+      <Separator layoutX="169.0" layoutY="180.0" opacity="0.44" prefWidth="200.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="209.0" />
+      <Label fx:id="txtName" layoutX="191.0" layoutY="108.0" text="  " textFill="#0d0000" />
+      <Label fx:id="txtTele" layoutX="191.0" layoutY="154.0" text="  " textFill="#0d0000" />
+      <Label fx:id="txtEmail" layoutX="192.0" layoutY="177.0" text="  " textFill="#0d0000" />
+      <Label fx:id="txtPackageName" layoutX="189.0" layoutY="277.0" text="-" textFill="#0a0000" />
+      <Label fx:id="txtPackageCost" layoutX="453.0" layoutY="277.0" text="-" textFill="#0a0000" />
+      <Separator layoutX="169.0" layoutY="560.0" opacity="0.44" prefWidth="200.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="560.0" />
+      <Label fx:id="txtAddress" layoutX="191.0" layoutY="131.0" text="  " textFill="#0d0000" />
+      <ComboBox fx:id="cmbCustomerIds" layoutX="39.0" layoutY="103.0" prefHeight="26.0" prefWidth="131.0" promptText="Customer ID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <ComboBox fx:id="cmbPackageids" layoutX="39.0" layoutY="272.0" prefHeight="26.0" prefWidth="131.0" promptText="Package ID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <JFXButton buttonType="RAISED" layoutX="615.0" layoutY="510.0" prefHeight="28.0" prefWidth="111.0" stylesheets="@../Style/pngpopup.css" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="618.0" layoutY="583.0" onAction="#placeOrderOnAction" prefHeight="41.0" prefWidth="111.0" stylesheets="@../Style/rebtn2.css" text="Place Order" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="31.0" layoutY="598.0" text="Total :" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtFullTotalAmount" layoutX="145.0" layoutY="602.0" text=" " textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="480.0" layoutY="511.0" onAction="#addtoOrderOnAction" prefHeight="28.0" prefWidth="111.0" stylesheets="@../Style/rebtn2.css" text="Add to Order" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="42.0" layoutY="227.0" text="Reservation Date" />
+      <TextField fx:id="txtReserveDate" layoutX="185.0" layoutY="222.0" prefHeight="26.0" prefWidth="202.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #ff0000;" />
+      <JFXButton buttonType="RAISED" layoutX="615.0" layoutY="156.0" prefHeight="28.0" prefWidth="111.0" stylesheets="@../Style/blueButton.css" text="+ new" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="txtBandName" layoutX="188.0" layoutY="317.0" text="-" textFill="#0a0000" />
+      <Label fx:id="txtBandCost" layoutX="452.0" layoutY="317.0" text="-" textFill="#0a0000" />
+      <ComboBox fx:id="cmbBandIds" layoutX="38.0" layoutY="312.0" prefHeight="26.0" prefWidth="131.0" promptText="Band ID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label fx:id="txtPhotographerName" layoutX="188.0" layoutY="358.0" text="-" textFill="#0a0000" />
+      <Label fx:id="txtPhotographerCost" layoutX="452.0" layoutY="358.0" text="-" textFill="#0a0000" />
+      <ComboBox fx:id="cmbPhotographerIds" layoutX="38.0" layoutY="353.0" prefHeight="26.0" prefWidth="131.0" promptText="Photographer ID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label fx:id="txtcarName" layoutX="189.0" layoutY="398.0" text="-" textFill="#0a0000" />
+      <Label fx:id="txtcarCost" layoutX="453.0" layoutY="398.0" text="-" textFill="#0a0000" />
+      <ComboBox fx:id="cmbCarIds" layoutX="39.0" layoutY="393.0" prefHeight="26.0" prefWidth="131.0" promptText="Car ID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+   </children>
+</AnchorPane>

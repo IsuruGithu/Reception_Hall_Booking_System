@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="566.0" prefWidth="833.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.setupOrderItems.CarController">
+   <children>
+      <Separator layoutX="225.0" layoutY="44.0" opacity="0.35" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="25.0" />
+      <Separator layoutX="28.0" layoutY="35.0" opacity="0.35" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="18.0" />
+      <Label layoutX="77.0" layoutY="33.0" text="Car ID" textFill="#140101" />
+      <Label layoutX="77.0" layoutY="71.0" text="Car Name" textFill="#140101" />
+      <TextField fx:id="txtCname" layoutX="169.0" layoutY="66.0" promptText="car name" style="-fx-background-color: #ffffff; -fx-border-color: #ff0000; -fx-border-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" />
+      <Label layoutX="77.0" layoutY="157.0" text="Car Cost" textFill="#140101" />
+      <TextField fx:id="txtCcost" layoutX="169.0" layoutY="152.0" prefHeight="28.0" prefWidth="250.0" promptText="car cost" style="-fx-background-color: #ffffff; -fx-border-color: #ff0000; -fx-border-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" />
+      <ImageView fx:id="imageView4" fitHeight="278.0" fitWidth="345.0" layoutX="457.0" layoutY="113.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Assets/Cars/1.jpg" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.63" radius="21.385" width="66.54" />
+         </effect>
+      </ImageView>
+      <ComboBox fx:id="cmbCid" layoutX="76.0" layoutY="300.0" prefHeight="26.0" prefWidth="163.0" promptText="Car ID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="76.0" layoutY="113.0" text="Package Id" textFill="#140101" />
+      <TextField fx:id="txtpackageid" layoutX="168.0" layoutY="108.0" promptText="package id" style="-fx-background-color: #ffffff; -fx-border-color: #ff0000; -fx-border-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" />
+      <JFXButton buttonType="RAISED" layoutX="278.0" layoutY="201.0" onAction="#carSaveonAction" prefHeight="28.0" prefWidth="143.0" stylesheets="@../../Style/redButton.css" text="Save" textFill="#110000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="278.0" layoutY="299.0" onAction="#carDeleteonAction" prefHeight="28.0" prefWidth="143.0" stylesheets="@../../Style/yellowbutton.css" text="Delete" textFill="#0d0000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtCarId" layoutX="169.0" layoutY="31.0" onAction="#CarSearchOnAction" promptText="car name" style="-fx-background-color: #ffffff; -fx-border-color: #ff0000; -fx-border-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" />
+      <JFXButton buttonType="RAISED" layoutX="374.0" layoutY="28.0" minWidth="37.0" onAction="#carnewIdonAction" prefHeight="28.0" prefWidth="28.0" stylesheets="@../../Style/blueButton.css" text="+" textFill="#0d0000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>

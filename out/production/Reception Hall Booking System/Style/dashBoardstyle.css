@@ -1,0 +1,28 @@
+*{
+    -fx-font-family: Ubuntu;
+}
+
+.button{
+    -fx-background-color : #ffff;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-color: #000000;
+    -fx-border-radius: 20 20 20 20;
+    -fx-text-fill: #000000;
+
+}
+
+.button:hover {
+    -fx-background-color : #fefd03;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-color: #fefd03;
+    -fx-border-radius: 20 20 20 20;
+    -fx-text-fill: #000000;
+}
+
+.button:pressed{
+    -fx-background-color :   #70fe71;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-color: #70fe71;
+    -fx-border-radius: 20 20 20 20;
+    -fx-text-fill:#000000;
+}

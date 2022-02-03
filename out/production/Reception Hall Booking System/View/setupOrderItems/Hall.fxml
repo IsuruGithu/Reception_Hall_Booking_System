@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="566.0" prefWidth="833.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.setupOrderItems.HallController">
+   <children>
+      <Separator layoutX="235.0" layoutY="26.0" opacity="0.29" prefWidth="200.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="25.0" />
+      <Separator layoutX="28.0" layoutY="35.0" opacity="0.29" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="18.0" />
+      <Label layoutX="51.0" layoutY="94.0" text="Hall Name" textFill="#170101" />
+      <Label layoutX="51.0" layoutY="137.0" text="Hall Description" textFill="#170101" />
+      <TextField fx:id="txthallName" layoutX="173.0" layoutY="89.0" prefHeight="28.0" prefWidth="246.0" promptText="Name" style="-fx-background-color: #ffffff; -fx-border-color: #ff0000; -fx-border-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" />
+      <TextField fx:id="txthallDes" layoutX="173.0" layoutY="131.0" prefHeight="28.0" prefWidth="325.0" promptText="Desc" style="-fx-background-color: #ffffff; -fx-border-color: #ff0000; -fx-border-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" />
+      <Label layoutX="51.0" layoutY="51.0" text="Hall ID" textFill="#170101" />
+      <ImageView fx:id="ImageView2" fitHeight="195.0" fitWidth="519.0" layoutX="206.0" layoutY="313.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Assets/Hall/1.jpg" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.31" radius="38.9025" width="136.61" />
+         </effect></ImageView>
+      <ComboBox fx:id="cmbHid" layoutX="51.0" layoutY="240.0" prefHeight="26.0" prefWidth="193.0" promptText="Hall ID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <JFXButton buttonType="RAISED" layoutX="381.0" layoutY="183.0" onAction="#hallSaveonAction" prefHeight="26.0" prefWidth="110.0" stylesheets="@../../Style/redButton.css" text="Save" textFill="#170000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="381.0" layoutY="239.0" onAction="#hallDeleteonAction" prefHeight="26.0" prefWidth="110.0" stylesheets="@../../Style/yellowbutton.css" text="Delete" textFill="#110000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txthallid" layoutX="173.0" layoutY="45.0" prefHeight="28.0" prefWidth="246.0" promptText="Hall ID" style="-fx-background-color: #ffffff; -fx-border-color: #ff0000; -fx-border-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" />
+      <JFXButton buttonType="RAISED" layoutX="454.0" layoutY="45.0" onAction="#hallnewIdonAction" prefHeight="28.0" prefWidth="27.0" stylesheets="@../../Style/blueButton.css" text="+" textFill="#170000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>

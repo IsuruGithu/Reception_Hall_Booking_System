@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerSaveController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="849.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-16.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../Assets/Icon/background1.jpeg" />
+         </image></ImageView>
+      <Separator layoutX="593.0" layoutY="16.0" opacity="0.29" orientation="VERTICAL" prefHeight="349.0" prefWidth="3.0" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="18.0" />
+      <Label alignment="CENTER" layoutX="215.0" layoutY="14.0" text="Customer Save Form" textAlignment="CENTER" textFill="#140000" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="57.0" layoutY="80.0" text="Customer ID" textFill="#140000" />
+      <Separator layoutX="169.0" layoutY="48.0" opacity="0.31" prefHeight="4.0" prefWidth="345.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="48.0" />
+      <Separator layoutX="600.0" layoutY="18.0" opacity="0.29" orientation="VERTICAL" prefHeight="349.0" prefWidth="3.0" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="18.0" />
+      <Pane layoutX="763.0" opacity="0.19" prefHeight="650.0" prefWidth="50.0" style="-fx-background-color: #367bf0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="763.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
+      <TextField fx:id="txtCid" layoutX="203.0" layoutY="74.0" onAction="#searchCustomer_onAction" prefHeight="28.0" prefWidth="160.0" promptText="id" style="-fx-background-color: #fffff; -fx-border-color: #ff0000; -fx-border-radius: 20; -fx-border-insets: 0; -fx-background-radius: 20;" />
+      <Label layoutX="57.0" layoutY="130.0" text="Customer Name" textFill="#140000" />
+      <TextField fx:id="txtCName" layoutX="203.0" layoutY="124.0" prefHeight="28.0" prefWidth="306.0" promptText="name" style="-fx-background-color: #fffff; -fx-border-color: #ff0000; -fx-border-radius: 20; -fx-border-insets: 0; -fx-background-radius: 20;" />
+      <Label layoutX="57.0" layoutY="235.0" text="Customer Address" textFill="#140000" />
+      <TextField fx:id="txtCAddress" layoutX="203.0" layoutY="229.0" onAction="#saveBtnclickOnAction" prefHeight="28.0" prefWidth="377.0" promptText="address" style="-fx-background-color: #fffff; -fx-border-color: #ff0000; -fx-border-radius: 20; -fx-border-insets: 0; -fx-background-radius: 20;" />
+      <Label layoutX="57.0" layoutY="165.0" text="Customer Tel" textFill="#140000" />
+      <TextField fx:id="txtCTel" layoutX="203.0" layoutY="159.0" prefHeight="28.0" prefWidth="306.0" promptText="+947 ..." style="-fx-background-color: #fffff; -fx-border-color: #ff0000; -fx-border-radius: 20; -fx-border-insets: 0; -fx-background-radius: 20;" />
+      <Label layoutX="56.0" layoutY="200.0" text="Customer E-mail" textFill="#140000" />
+      <TextField fx:id="txtCEmail" layoutX="202.0" layoutY="194.0" prefHeight="28.0" prefWidth="306.0" promptText="mail" style="-fx-background-color: #fffff; -fx-border-color: #ff0000; -fx-border-radius: 20; -fx-border-insets: 0; -fx-background-radius: 20;" />
+      <JFXButton buttonType="RAISED" layoutX="613.0" layoutY="311.0" onAction="#customerSaveOnAction" prefHeight="28.0" prefWidth="120.0" stylesheets="@../Style/redButton.css" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="613.0" layoutY="69.0" onAction="#customerAddnew" prefHeight="4.0" prefWidth="120.0" stylesheets="@../Style/blueButton.css" text="+ add new" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="403.0" layoutY="311.0" onAction="#customerDeleteOnAction" prefHeight="28.0" prefWidth="120.0" stylesheets="@../Style/pngpopup.css" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="272.0" layoutY="311.0" onAction="#customerUpdateOnAction" prefHeight="28.0" prefWidth="120.0" stylesheets="@../Style/pngpopup.css" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="613.0" layoutY="229.0" onAction="#txtclear_onAction" prefHeight="28.0" prefWidth="120.0" stylesheets="@../Style/pngpopup.css" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="txtShowAction" layoutX="273.0" layoutY="280.0" text=" " textFill="RED" />
+      <TableView fx:id="tblCustomer" layoutX="55.0" layoutY="353.0" prefHeight="280.0" prefWidth="678.0" stylesheets="@../Style/tableEffect.css">
+        <columns>
+          <TableColumn fx:id="clmid" prefWidth="102.0" text="Customer Id" />
+          <TableColumn fx:id="clmname" prefWidth="136.0" text="Customer Name" />
+            <TableColumn fx:id="clmTel" prefWidth="143.0" text="Customer Tele" />
+            <TableColumn fx:id="clmmail" prefWidth="147.0" text="Customer E mail" />
+            <TableColumn fx:id="clmaddress" prefWidth="149.0" text="Customer Address" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </TableView>
+   </children>
+</AnchorPane>
